@@ -1,0 +1,1 @@
+(()=>{"use strict";var e={693:(e,r)=>{Object.defineProperty(r,"__esModule",{value:!0}),r.sum=void 0,r.sum=function(e,r){return e+r}}},r={};function o(t){var s=r[t];if(void 0!==s)return s.exports;var u=r[t]={exports:{}};return e[t](u,u.exports,o),u.exports}(()=>{const e=(0,o(693).sum)(10,20);console.log(e)})()})();
