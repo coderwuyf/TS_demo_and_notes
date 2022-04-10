@@ -119,4 +119,30 @@ eatAction({
     console.log("anything Eating");
   },
 }); // 也因为作为参数的这个对象中也存在eating这个方法,所以也能编译通过
+
+// 7.interface与type的区别
+// 7.1虽然interface与type都能定义对象类型,但是定义非对象类型时通常推荐使用type,比如direction/Alignment/一些Function
+// 7.2那么在定义对象类型时,二者的主要区别在于,interface可以重复对某个接口来定义属性和方法的,而type定义的是别名,别名是不能重复的
+interface IInterface {
+  name: string;
+}
+interface IInterface {
+  age: number;
+}
+const iInterface: IInterface = {
+  name: "必须同时包含name和age",
+  age: 18,
+};
+
+type MyType = {
+  name: string;
+};
+/*
+error TS2300: Duplicate identifier 'MyType'  重复声明'MyType'
+type MyType = {
+  age: number;
+};
+*/
+// 这个特性的意义在于TypeScript会在其lib中默认给我们内置一些诸如Window,Document,HTMLElement...等类型,当我们想在其基础上添加一些属性或方法时,就可以利用到interface的这个特性
+
 export {};

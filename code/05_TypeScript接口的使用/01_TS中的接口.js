@@ -52,3 +52,7 @@ eatAction({
         console.log("anything Eating");
     },
 }); // 也因为作为参数的这个对象中也存在eating这个方法,所以也能编译通过
+const iInterface = {
+    name: "必须同时包含name和age",
+    age: 18,
+};
